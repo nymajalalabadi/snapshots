@@ -13,7 +13,10 @@ export default function ClientsPage() {
         <ul className="flex gap-2">
             {clients.map((client) => (
                 <li key={client.id} className="bg-blue-500 text-white p-2 rounded-md">
-                    <Link href={`/clients/${client.id}`} className="text-white">{client.name}</Link>
+                    <Link href={{
+                        pathname: '/clients/[id]',
+                        query: { id: client.id }
+                    }} className="text-white">{client.name}</Link>
                 </li>
             ))}
         </ul>
