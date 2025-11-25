@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from "next/link";
 import Layout from "../components/Layout";
 
 export default function ContactPage() {
@@ -57,12 +56,12 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="py-16">
         <div className="container">
-          <div className="grid lg-grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-12">
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md-grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name *
@@ -74,7 +73,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -89,7 +88,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -223,14 +222,14 @@ export default function ContactPage() {
               <div className="mt-8">
                 <h3 className="font-semibold mb-4">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors">
-                    LinkedIn
+                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors text-lg">
+                    💼
                   </a>
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors">
-                    Twitter
+                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors text-lg">
+                    🐦
                   </a>
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors">
-                    GitHub
+                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 hover:text-primary-600 transition-colors text-lg">
+                    📦
                   </a>
                 </div>
               </div>
